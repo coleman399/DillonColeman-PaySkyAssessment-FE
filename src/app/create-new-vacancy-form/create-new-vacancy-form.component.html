@@ -1,0 +1,39 @@
+<br />
+<div class="container text-center">
+  <div class="row">
+    <div class="col"></div>
+    <div class="col">
+      <form #newVacancyForm="ngForm" (ngSubmit)="onSubmit(newVacancyForm)">
+        <div class="row">
+          <label for="Volume" class="form-label">Volume</label>
+          <input
+            class="form-control"
+            type="number"
+            name="Volume"
+            id="Volume"
+            placeholder="10"
+            [(ngModel)]="volume"
+          />
+        </div>
+        <div class="row">
+          <label for="Expiration Date" class="form-label"
+            >Expiration Date</label
+          >
+          <input
+            class="form-control"
+            type="date"
+            name="Expiration Date"
+            id="Expiration Date"
+            placeholder="12/25/2024"
+            [(ngModel)]="expirationDate"
+          />
+        </div>
+        <br />
+        <button class="btn btn-primary" type="submit" aria-placeholder="Submit">
+          Submit
+        </button>
+      </form>
+    </div>
+    <div class="col"></div>
+  </div>
+</div>
