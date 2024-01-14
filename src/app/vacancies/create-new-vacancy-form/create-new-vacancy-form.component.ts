@@ -1,5 +1,5 @@
 import { Component } from '@angular/core';
-import { Form, FormControl, NgForm } from '@angular/forms';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-create-new-vacancy-form',
@@ -14,7 +14,6 @@ export class CreateNewVacancyFormComponent {
     console.log('Form submitted');
     console.log(`Volume: ${this.volume}`);
     console.log(`Expiration Date: ${this.expirationDate}`);
-    console.log(`Form: ${form}`);
     form.reset();
   }
 

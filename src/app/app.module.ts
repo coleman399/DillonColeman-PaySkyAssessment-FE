@@ -1,30 +1,30 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { FormsModule, FormControl } from '@angular/forms';
+import { FormsModule } from '@angular/forms';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-import { CreateNewVacancyFormComponent } from './create-new-vacancy-form/create-new-vacancy-form.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
-import { CreateNewAccountFormComponent } from './create-new-account-form/create-new-account-form.component';
+import { VacanciesComponent } from './vacancies/vacancies.component';
+import { CreateNewVacancyFormComponent } from './vacancies/create-new-vacancy-form/create-new-vacancy-form.component';
+import { CreateNewAccountFormComponent } from './login/create-new-account-form/create-new-account-form.component';
+import { LoginFormComponent } from './login/login-form/login-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
-    CreateNewVacancyFormComponent,
     HomeComponent,
     LoginComponent,
-    CreateNewAccountFormComponent
+    VacanciesComponent,
+    CreateNewVacancyFormComponent,
+    CreateNewAccountFormComponent,
+    LoginFormComponent,
   ],
-  imports: [
-    FormsModule,
-    BrowserModule,
-    AppRoutingModule
-  ],
+  imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
