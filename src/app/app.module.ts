@@ -11,6 +11,7 @@ import { VacanciesComponent } from './header/vacancies/vacancies.component';
 import { CreateNewVacancyFormComponent } from './header/vacancies/create-new-vacancy-form/create-new-vacancy-form.component';
 import { CreateNewAccountFormComponent } from './header/login/create-new-account-form/create-new-account-form.component';
 import { LoginFormComponent } from './header/login/login-form/login-form.component';
+import { CockpitComponent } from './cockpit/cockpit.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { LoginFormComponent } from './header/login/login-form/login-form.compone
     CreateNewVacancyFormComponent,
     CreateNewAccountFormComponent,
     LoginFormComponent,
+    CockpitComponent,
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],
