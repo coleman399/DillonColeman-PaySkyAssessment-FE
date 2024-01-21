@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, EventEmitter, Injectable, Output } from '@angular/core';
 import { NgForm } from '@angular/forms';
 
 @Component({
@@ -6,7 +6,9 @@ import { NgForm } from '@angular/forms';
   templateUrl: './create-new-vacancy-form.component.html',
   styleUrls: ['./create-new-vacancy-form.component.css']
 })
+@Injectable()
 export class CreateNewVacancyFormComponent {
+  @Output() cancelCreatingNewVacancy = new EventEmitter<string>();
   volume: number = 0;
   expirationDate: Date = new Date();
 
@@ -15,6 +17,10 @@ export class CreateNewVacancyFormComponent {
     console.log(`Volume: ${this.volume}`);
     console.log(`Expiration Date: ${this.expirationDate}`);
     form.reset();
+  }
+
+  cancel() {
+    this.cancelCreatingNewVacancy.emit('vacancies-list');
   }
 
 }

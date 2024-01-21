@@ -1,1 +1,20 @@
-<p>vacancies works!</p>
+
+      <div
+        *ngIf="
+          internalView === 'vacancies-list';
+          then getVacanciesList;
+          else createNewVacancyForm
+        "
+      ></div>
+
+      <ng-template #getVacanciesList>
+        <app-vacancies-list
+          (createNewVacancyEvent)="updateVacancyView($event)"
+        ></app-vacancies-list>
+      </ng-template>
+      <ng-template #createNewVacancyForm>
+        <app-create-new-vacancy-form
+          (cancelCreatingNewVacancy)="updateVacancyView($event)"
+        ></app-create-new-vacancy-form>
+      </ng-template>
+

@@ -1,21 +1,4 @@
-<div class="container text-center">
-  <div class="row align-items-start">
-    <div class="col">
-    </div>
-    <div class="col">
-      <h1>DillonColeman_PaySkyAssessment_Frontend</h1>
-    </div>
-    <div class="col">
-    </div>
-  </div>
+<div class="container">
+  <app-header (currentView)="updateCurrentView($event)"></app-header>
+  <app-cockpit [currentView]="currentView"></app-cockpit>
 </div>
-<app-header></app-header>
-<div ng-if="">
-
-</div>
-<app-create-new-vacancy-form></app-create-new-vacancy-form>
-
-
-
-
-

@@ -1,10 +1,10 @@
-import { Component } from '@angular/core';
+import { Component, Injectable, Input, Output } from '@angular/core';
+import { LoginFormComponent } from './login-form/login-form.component';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
-  styleUrls: ['./login.component.css']
+  styleUrls: ['./login.component.css'],
 })
-export class LoginComponent {
-
-}
+@Injectable({ providedIn: 'root' })
+export class LoginComponent {}

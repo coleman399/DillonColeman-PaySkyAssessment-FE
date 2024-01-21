@@ -1,27 +1,31 @@
-import { Component } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
-  styleUrls: ['./header.component.css']
+  styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  Vacancies: string[] = [];
+  @Output() currentView = new EventEmitter<string>();
 
-
-  constructor() { }
-
+  constructor() {}
 
   ngOnInit(): void {
+    this.home();
   }
 
-  getVacancies(): string[] {
-    this.Vacancies = ['Vacancy 1', 'Vacancy 2', 'Vacancy 3', 'Vacancy 4', 'Vacancy 5', 'Vacancy 6', 'Vacancy 7', 'Vacancy 8', 'Vacancy 9', 'Vacancy 10'];
-    console.log(this.Vacancies);
-    return this.Vacancies;
+  getVacancies(): void {
+    console.log('getVacancies()');
+    this.currentView.emit('vacancies');
   }
 
   login(): void {
-    alert('Login button clicked');
+    console.log('login()');
+    this.currentView.emit('login');
+  }
+
+  home(): void {
+    console.log('home()');
+    this.currentView.emit('home');
   }
 }

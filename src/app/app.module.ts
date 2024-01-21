@@ -1,4 +1,4 @@
-import { NgModule } from '@angular/core';
+import { Input, NgModule, Output } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule } from '@angular/forms';
 
@@ -12,6 +12,7 @@ import { CreateNewVacancyFormComponent } from './header/vacancies/create-new-vac
 import { CreateNewAccountFormComponent } from './header/login/create-new-account-form/create-new-account-form.component';
 import { LoginFormComponent } from './header/login/login-form/login-form.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
+import { VacanciesListComponent } from './header/vacancies/vacancies-list/vacancies-list.component';
 
 @NgModule({
   declarations: [
@@ -24,9 +25,11 @@ import { CockpitComponent } from './cockpit/cockpit.component';
     CreateNewAccountFormComponent,
     LoginFormComponent,
     CockpitComponent,
+    VacanciesListComponent,
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],
   bootstrap: [AppComponent],
 })
-export class AppModule {}
+export class AppModule {
+}

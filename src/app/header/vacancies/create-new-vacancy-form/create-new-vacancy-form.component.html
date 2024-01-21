@@ -1,8 +1,7 @@
-<br />
 <div class="container text-center">
   <div class="row">
     <div class="col"></div>
-    <div class="col">
+    <div class="col-4">
       <form #newVacancyForm="ngForm" (ngSubmit)="onSubmit(newVacancyForm)">
         <div class="row">
           <label for="Volume" class="form-label">Volume</label>
@@ -31,6 +30,14 @@
         <br />
         <button class="btn btn-primary" type="submit" aria-placeholder="Submit">
           Submit
+        </button>
+        <button
+          class="btn btn-danger"
+          type="button"
+          (click)="cancel()"
+          aria-placeholder="Cancel"
+        >
+          Cancel
         </button>
       </form>
     </div>
