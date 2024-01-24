@@ -1,1 +1,17 @@
-<p>login works!</p>
+<div
+  *ngIf="
+    internalView === 'login-form';
+    then loginForm;
+    else createNewAccountForm
+  "
+></div>
+
+<ng-template #loginForm>
+  <app-login-form
+    (loginFormEmitter)="updateLoginView($event)"
+  ></app-login-form>
+</ng-template>
+<ng-template #createNewAccountForm>
+  <app-create-new-account-form
+    (cancelCreatingNewAccountEmitter)="updateLoginView($event)"
+  ></app-create-new-account-form>

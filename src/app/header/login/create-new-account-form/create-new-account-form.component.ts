@@ -1,4 +1,4 @@
-import { Component, Injectable, Output } from '@angular/core';
+import { Component, EventEmitter, Injectable, Output } from '@angular/core';
 
 @Component({
   selector: 'app-create-new-account-form',
@@ -7,5 +7,8 @@ import { Component, Injectable, Output } from '@angular/core';
 })
 @Injectable()
 export class CreateNewAccountFormComponent {
-  @Output() view = 'create-new-account';
+  @Output() createNewAccountFormEmitter = new EventEmitter<string>();
+  @Output() cancelCreatingNewAccountEmitter = new EventEmitter<string>();
+
+
 }

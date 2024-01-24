@@ -1,5 +1,7 @@
-import { Component, EventEmitter, Injectable, Input, Output } from '@angular/core';
-import { LoginFormComponent } from './login-form/login-form.component';
+import {
+  Component,
+  Injectable,
+} from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -8,15 +10,10 @@ import { LoginFormComponent } from './login-form/login-form.component';
 })
 @Injectable()
 export class LoginComponent {
-  @Input() internalView: string = '';
+  internalView: string = '';
 
-  updateLoginView($event: string) {
-    console.log('updateLoginView() called, event output: ' + $event);
-    this.internalView = $event;
-  }
-
-  ngOnChanges() {
-    console.log('ngOnChanges()');
-    console.log('internalView: ' + this.internalView);
+  updateLoginView(view: string) {
+    console.log('updateLoginView() called, event output: ' + view);
+    this.internalView = view;
   }
 }
