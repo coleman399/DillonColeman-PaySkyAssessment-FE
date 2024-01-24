@@ -7,7 +7,7 @@ import { Component, EventEmitter, Injectable, Input, Output } from '@angular/cor
 })
 @Injectable()
 export class HomeComponent {
-  @Input() internalView: string = '';
+  internalView: string = '';
 
   ngOnChanges() {
     console.log('ngOnChanges()');
