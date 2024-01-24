@@ -5,7 +5,7 @@ import { Component, Injectable, Output } from '@angular/core';
   templateUrl: './create-new-account-form.component.html',
   styleUrls: ['./create-new-account-form.component.css'],
 })
-@Injectable({ providedIn: 'root' })
+@Injectable()
 export class CreateNewAccountFormComponent {
   @Output() view = 'create-new-account';
 }

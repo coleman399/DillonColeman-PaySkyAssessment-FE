@@ -7,10 +7,10 @@ import { Component, Input } from '@angular/core';
 })
 export class AppComponent {
   title = 'DillonColeman_PaySkyAssessment_Frontend';
-  @Input() currentView: string = '';
+  currentView: string = '';
 
-  updateCurrentView($event: string) {
-    console.log('updateCurrentView() called, event output: ' + $event);
-    this.currentView = $event;
+  updateCurrentView(view: string) {
+    console.log('updateCurrentView() called, event output: ' + view);
+    this.currentView = view;
   }
 }

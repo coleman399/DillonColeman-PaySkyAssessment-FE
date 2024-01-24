@@ -12,10 +12,10 @@ import {
 })
 @Injectable()
 export class VacanciesListComponent {
-  @Output() createNewVacancyEvent = new EventEmitter<string>();
+  @Output() createNewVacancyEmitter = new EventEmitter<string>();
 
   createNewVacancy() {
     console.log('createNewVacancy() called');
-    this.createNewVacancyEvent.emit('create-new-vacancy');
+    this.createNewVacancyEmitter.emit('create-new-vacancy');
   }
 }

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Injectable, Output } from '@angular/core';
+import { Component, EventEmitter, Injectable, Input, Output } from '@angular/core';
 
 @Component({
   selector: 'app-home',
@@ -6,4 +6,11 @@ import { Component, EventEmitter, Injectable, Output } from '@angular/core';
   styleUrls: ['./home.component.css'],
 })
 @Injectable()
-export class HomeComponent {}
+export class HomeComponent {
+  @Input() internalView: string = '';
+
+  ngOnChanges() {
+    console.log('ngOnChanges()');
+    console.log('internalView: ' + this.internalView);
+  }
+}

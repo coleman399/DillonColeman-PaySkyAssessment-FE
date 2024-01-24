@@ -6,7 +6,7 @@ import { Component, Input, Output, EventEmitter } from '@angular/core';
   styleUrls: ['./header.component.css'],
 })
 export class HeaderComponent {
-  @Output() currentView = new EventEmitter<string>();
+  @Output() currentViewEmitter = new EventEmitter<string>();
 
   constructor() {}
 
@@ -16,16 +16,16 @@ export class HeaderComponent {
 
   getVacancies(): void {
     console.log('getVacancies()');
-    this.currentView.emit('vacancies');
+    this.currentViewEmitter.emit('vacancies');
   }
 
   login(): void {
     console.log('login()');
-    this.currentView.emit('login');
+    this.currentViewEmitter.emit('login');
   }
 
   home(): void {
     console.log('home()');
-    this.currentView.emit('home');
+    this.currentViewEmitter.emit('home');
   }
 }

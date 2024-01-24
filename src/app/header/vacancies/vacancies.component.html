@@ -9,12 +9,12 @@
 
       <ng-template #getVacanciesList>
         <app-vacancies-list
-          (createNewVacancyEvent)="updateVacancyView($event)"
+          (createNewVacancyEmitter)="updateVacancyView($event)"
         ></app-vacancies-list>
       </ng-template>
       <ng-template #createNewVacancyForm>
         <app-create-new-vacancy-form
-          (cancelCreatingNewVacancy)="updateVacancyView($event)"
+          (cancelCreatingNewVacancyEmitter)="updateVacancyView($event)"
         ></app-create-new-vacancy-form>
       </ng-template>
 
