@@ -10,7 +10,7 @@ export class AppComponent {
   currentView: string = '';
 
   updateCurrentView(view: string) {
-    console.log('AppComp updateCurrentView() called, event output: ' + view);
+    console.log(`AppComp updateCurrentView() called, currentView: ${view}`);
     this.currentView = view;
   }
 }

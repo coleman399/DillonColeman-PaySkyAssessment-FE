@@ -13,12 +13,7 @@ export class VacanciesComponent {
   }
 
   updateVacancyView(view: string) {
-    console.log('updateVacancyView() called, event output: ' + view);
+    console.log(`VacanciesComp updateVacancyView() called, internalView: ${view}`);
     this.internalView = view;
-  }
-
-  ngOnChanges() {
-    console.log('ngOnChanges()');
-    console.log('internalView: ' + this.internalView);
   }
 }

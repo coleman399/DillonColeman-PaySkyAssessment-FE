@@ -15,11 +15,10 @@ import { VacanciesComponent } from '../header/vacancies/vacancies.component';
 @Injectable()
 export class CockpitComponent {
   @Input() currentView: string = '';
-  internalView: string = '';
 
   ngOnChanges() {
     console.log(
-      `Cockpit ngOnChanges() called currentView: ${this.currentView}`
+      `CockpitComp ngOnChanges() called, currentView: ${this.currentView}`
     );
   }
 }
