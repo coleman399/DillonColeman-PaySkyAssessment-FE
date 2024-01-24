@@ -10,5 +10,13 @@ export class CreateNewAccountFormComponent {
   @Output() createNewAccountFormEmitter = new EventEmitter<string>();
   @Output() cancelCreatingNewAccountEmitter = new EventEmitter<string>();
 
+  createNewAccount() {
+    console.log('CreateNewAccountFormComp createNewAccount() called');
+    this.createNewAccountFormEmitter.emit('create-new-account');
+  }
 
+  cancelCreatingNewAccount() {
+    console.log('CreateNewAccountFormComp cancelCreatingNewAccount() called');
+    this.cancelCreatingNewAccountEmitter.emit('login');
+  }
 }

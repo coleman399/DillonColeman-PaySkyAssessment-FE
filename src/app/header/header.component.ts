@@ -1,4 +1,4 @@
-import { Component, Input, Output, EventEmitter } from '@angular/core';
+import { Component, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-header',
@@ -14,14 +14,14 @@ export class HeaderComponent {
     this.home();
   }
 
-  getVacancies(): void {
+  vacancies(): void {
     console.log(`HeaderComp getVacancies() called`);
     this.currentViewEmitter.emit('vacancies');
   }
 
   login(): void {
     console.log(`HeaderComp login() called`);
-    this.currentViewEmitter.emit('login');
+    this.currentViewEmitter.emit('login-form');
   }
 
   home(): void {

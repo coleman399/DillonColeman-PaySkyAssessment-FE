@@ -1,7 +1,4 @@
-import {
-  Component,
-  Injectable,
-} from '@angular/core';
+import { Component, Injectable } from '@angular/core';
 
 @Component({
   selector: 'app-login',
@@ -11,6 +8,10 @@ import {
 @Injectable()
 export class LoginComponent {
   internalView: string = '';
+
+  ngOnInit() {
+    this.internalView = 'login-form';
+  }
 
   updateLoginView(view: string) {
     console.log('updateLoginView() called, event output: ' + view);

@@ -10,7 +10,7 @@ export class LoginFormComponent {
   @Output() loginFormEmitter = new EventEmitter<string>();
 
   login() {
-    console.log('login() called');
-    this.loginFormEmitter.emit('login');
+    console.log('LoginFormComp login() called');
+    this.loginFormEmitter.emit('login-form');
   }
 }
