@@ -14,6 +14,7 @@ import { LoginFormComponent } from './header/login/login-form/login-form.compone
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { VacanciesListComponent } from './header/vacancies/vacancies-list/vacancies-list.component';
 import { ForgotPasswordFormComponent } from './header/login/forgot-password-form/forgot-password-form.component';
+import { FooterComponent } from './footer/footer.component';
 
 @NgModule({
   declarations: [
@@ -28,6 +29,7 @@ import { ForgotPasswordFormComponent } from './header/login/forgot-password-form
     CockpitComponent,
     VacanciesListComponent,
     ForgotPasswordFormComponent,
+    FooterComponent,
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],

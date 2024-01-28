@@ -1,0 +1,11 @@
+a {
+  color: black;
+  margin: 0.2rem;
+  text-decoration: none;
+}
+
+.container {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+}
