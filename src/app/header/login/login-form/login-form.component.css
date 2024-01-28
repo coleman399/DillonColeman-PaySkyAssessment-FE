@@ -7,3 +7,13 @@ button {
   white-space: nowrap;
   justify-content: center;
 }
+
+hr {
+  text-align: center;
+  justify-self: center;
+  margin-left: 6% !important;
+}
+
+.form-group {
+  margin-bottom: 0.5rem;
+}
