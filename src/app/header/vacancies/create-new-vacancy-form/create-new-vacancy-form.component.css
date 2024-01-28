@@ -7,3 +7,7 @@ button {
   white-space: nowrap;
   justify-content: center;
 }
+
+.form-group {
+  margin-bottom: 0.25rem;
+}

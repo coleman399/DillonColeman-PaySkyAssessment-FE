@@ -1,9 +1,10 @@
 <div class="container">
   <div class="row">
-    <div class="col"></div>
+    <div class="col-4"></div>
     <div class="col-4">
+      <br />
       <form #newVacancyForm="ngForm" (ngSubmit)="onSubmit(newVacancyForm)">
-        <div class="row">
+        <div class="form-group">
           <label for="Volume" class="form-label">Volume</label>
           <input
             class="form-control"
@@ -14,7 +15,7 @@
             [(ngModel)]="volume"
           />
         </div>
-        <div class="row">
+        <div class="form-group">
           <label for="Expiration Date" class="form-label"
             >Expiration Date</label
           >
@@ -29,24 +30,26 @@
         </div>
         <br />
         <div class="row">
-          <div class="container">
-            <div class="inline-buttons">
-              <button class="btn btn-primary" type="submit" aria-placeholder="Submit">
-                Submit
-              </button>
-              <button
-                class="btn btn-danger"
-                type="button"
-                (click)="cancel()"
-                aria-placeholder="Cancel"
-              >
-                Cancel
-              </button>
-            </div>
+          <div class="inline-buttons">
+            <button
+              class="btn btn-primary"
+              type="submit"
+              aria-placeholder="Submit"
+            >
+              Submit
+            </button>
+            <button
+              class="btn btn-danger"
+              type="button"
+              (click)="cancel()"
+              aria-placeholder="Cancel"
+            >
+              Cancel
+            </button>
           </div>
         </div>
       </form>
     </div>
-    <div class="col"></div>
+    <div class="col-4"></div>
   </div>
 </div>
