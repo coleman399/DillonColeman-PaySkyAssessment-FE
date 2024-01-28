@@ -1,5 +1,6 @@
 <div class="container">
-  <app-header (currentViewEmitter)="updateCurrentView($event)"></app-header>
+  <app-header (currentViewEmitter)="updateCurrentView($event)">
+  </app-header>
   <app-cockpit [currentView]="currentView"></app-cockpit>
   <app-footer></app-footer>
 </div>

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Injectable, Output } from '@angular/core';
+import { Component, EventEmitter, Output } from '@angular/core';
 
 @Component({
   selector: 'app-login-form',
@@ -7,7 +7,8 @@ import { Component, EventEmitter, Injectable, Output } from '@angular/core';
 })
 export class LoginFormComponent {
   @Output() signInEmitter: EventEmitter<string> = new EventEmitter<string>();
-  @Output() navigateToForgotPasswordFormEmitter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() navigateToForgotPasswordFormEmitter: EventEmitter<string> =
+    new EventEmitter<string>();
 
   signIn() {
     console.log('LoginFormComp signIn() called');

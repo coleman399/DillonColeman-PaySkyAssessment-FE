@@ -1,7 +1,7 @@
-<div class="container justify-content-center">
+<div class="container">
   <div class="row">
-    <div class="col-3"></div>
-    <div class="col-6">
+    <div class="col-2"></div>
+    <div class="col-8">
       <br />
       <form>
         <div class="form-group">
@@ -29,27 +29,23 @@
             ><input type="checkbox" id="rememberMe" /> Remember me</label
           >
         </div>
-        <div class="row">
-          <div class="col-12">
-            <div class="inline-buttons">
-              <button type="submit" class="btn btn-primary">Sign in</button>
-              <button
-                type="button"
-                class="btn btn-primary"
-                (click)="navigateToForgotPasswordForm()"
-              >
-                Forgot password
-              </button>
-            </div>
-            <hr />
-            <div class="inline-buttons">
-              <button type="button" class="btn btn-success">Sign up</button>
-              <button type="button" class="btn btn-danger">Cancel</button>
-            </div>
-          </div>
+        <br />
+        <div class="col text-center">
+          <button type="submit" class="btn btn-primary" (click)="signIn()">
+            Sign in
+          </button>
+          <button
+            type="button"
+            class="btn btn-primary"
+            (click)="navigateToForgotPasswordForm()"
+          >
+            Forgot password
+          </button>
+          <hr />
+          <button type="button" class="btn btn-success">Sign up</button>
         </div>
       </form>
     </div>
-    <div class="col-3"></div>
+    <div class="col-2"></div>
   </div>
 </div>

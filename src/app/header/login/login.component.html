@@ -1,8 +1,9 @@
 <div [ngSwitch]="internalView">
   <app-login-form
     *ngSwitchCase="'login-form'"
-    (signInEmitter)="updateLoginView($event)"
+    (signInEmitter)="signIn($event)"
     (navigateToForgotPasswordFormEmitter)="updateLoginView($event)"
+    (cancelLoginEmitter)="cancelLogin()"
   ></app-login-form>
   <app-create-new-account-form
     *ngSwitchCase="'create-new-account-form'"

@@ -11,3 +11,7 @@ button {
 .form-group {
   margin-bottom: 0.25rem;
 }
+
+.container {
+  max-width: 800px;
+}

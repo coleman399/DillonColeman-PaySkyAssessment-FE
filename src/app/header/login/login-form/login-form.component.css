@@ -1,5 +1,10 @@
 button {
   margin: 0.2rem;
+  justify-content: center;
+  align-items: center;
+  display: grid;
+  text-align: center;
+  display: inline-block;
 }
 
 .inline-buttons {
@@ -15,4 +20,15 @@ hr {
 
 .form-group {
   margin-bottom: 0.25rem;
+}
+
+.container {
+  max-width: 600px;
+  border-style: solid;
+  border-width: 1px;
+  border-color: #c2c4c5;
+  border-radius: 5px;
+  padding: 10px;
+  margin-top: 2rem;
+  background-color: rgb(248, 249, 250);
 }
