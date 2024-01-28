@@ -1,4 +1,4 @@
-import { Component, Inject, Injectable, Input, Output } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-vacancies',
@@ -6,6 +6,7 @@ import { Component, Inject, Injectable, Input, Output } from '@angular/core';
   styleUrls: ['./vacancies.component.css'],
 })
 export class VacanciesComponent {
+  componentTitle: string = 'Vacancies'
   internalView: string = '';
 
   ngOnInit() {

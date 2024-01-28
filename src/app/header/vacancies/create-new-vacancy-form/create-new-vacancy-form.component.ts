@@ -8,7 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 @Injectable()
 export class CreateNewVacancyFormComponent {
-  @Output() cancelCreatingNewVacancyEmitter = new EventEmitter<string>();
+  @Output() cancelCreatingNewVacancyEmitter: EventEmitter<string> = new EventEmitter<string>();
   volume: number = 0;
   expirationDate: Date = new Date();
 
@@ -20,6 +20,7 @@ export class CreateNewVacancyFormComponent {
   }
 
   cancel() {
+    console.log('CreateNewVacancyFormComp cancel() called');
     this.cancelCreatingNewVacancyEmitter.emit('vacancies-list');
   }
 

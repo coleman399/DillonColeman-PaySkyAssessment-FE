@@ -1,11 +1,10 @@
-import { Component, Injectable } from '@angular/core';
+import { Component } from '@angular/core';
 
 @Component({
   selector: 'app-login',
   templateUrl: './login.component.html',
   styleUrls: ['./login.component.css'],
 })
-@Injectable()
 export class LoginComponent {
   internalView: string = '';
 
@@ -14,7 +13,7 @@ export class LoginComponent {
   }
 
   updateLoginView(view: string) {
-    console.log('updateLoginView() called, event output: ' + view);
+    console.log(`LoginComp updateLoginView() called, internalView: ${view}`);
     this.internalView = view;
   }
 }

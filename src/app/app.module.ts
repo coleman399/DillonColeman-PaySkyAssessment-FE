@@ -13,6 +13,7 @@ import { CreateNewAccountFormComponent } from './header/login/create-new-account
 import { LoginFormComponent } from './header/login/login-form/login-form.component';
 import { CockpitComponent } from './cockpit/cockpit.component';
 import { VacanciesListComponent } from './header/vacancies/vacancies-list/vacancies-list.component';
+import { ForgotPasswordFormComponent } from './header/login/forgot-password-form/forgot-password-form.component';
 
 @NgModule({
   declarations: [
@@ -26,6 +27,7 @@ import { VacanciesListComponent } from './header/vacancies/vacancies-list/vacanc
     LoginFormComponent,
     CockpitComponent,
     VacanciesListComponent,
+    ForgotPasswordFormComponent,
   ],
   imports: [FormsModule, BrowserModule, AppRoutingModule],
   providers: [],

@@ -5,12 +5,17 @@ import { Component, EventEmitter, Injectable, Output } from '@angular/core';
   templateUrl: './login-form.component.html',
   styleUrls: ['./login-form.component.css'],
 })
-@Injectable()
 export class LoginFormComponent {
-  @Output() loginFormEmitter = new EventEmitter<string>();
+  @Output() signInEmitter: EventEmitter<string> = new EventEmitter<string>();
+  @Output() navigateToForgotPasswordFormEmitter: EventEmitter<string> = new EventEmitter<string>();
 
-  login() {
-    console.log('LoginFormComp login() called');
-    this.loginFormEmitter.emit('login-form');
+  signIn() {
+    console.log('LoginFormComp signIn() called');
+    this.signInEmitter.emit('sign-in');
+  }
+
+  navigateToForgotPasswordForm() {
+    console.log('LoginFormComp navigateToForgotPasswordForm() called');
+    this.navigateToForgotPasswordFormEmitter.emit('forgot-password-form');
   }
 }

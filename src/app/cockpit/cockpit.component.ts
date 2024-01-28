@@ -2,8 +2,6 @@ import {
   Component,
   Injectable,
   Input,
-  SimpleChanges,
-  ViewChildren,
 } from '@angular/core';
 import { VacanciesComponent } from '../header/vacancies/vacancies.component';
 

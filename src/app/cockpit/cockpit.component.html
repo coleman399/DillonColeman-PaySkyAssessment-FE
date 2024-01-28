@@ -2,16 +2,12 @@
   <div class="col"></div>
   <div class="col">
     <div class="row">
-      <div class="container" *ngIf="currentView === 'vacancies'">
-        <app-vacancies></app-vacancies>
-      </div>
-      <div class="container" *ngIf="currentView === 'login-form'">
-        <app-login></app-login>
-      </div>
-      <div class="container" *ngIf="currentView === 'home'">
-        <app-home></app-home>
+      <div [ngSwitch]="currentView">
+        <app-vacancies *ngSwitchCase="'Vacancies'"></app-vacancies>
+        <app-login *ngSwitchCase="'Login'"></app-login>
+        <app-home *ngSwitchCase="'Home'"></app-home>
       </div>
     </div>
+    <div class="col"></div>
   </div>
-  <div class="col"></div>
 </div>

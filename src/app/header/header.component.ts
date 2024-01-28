@@ -16,16 +16,16 @@ export class HeaderComponent {
 
   vacancies(): void {
     console.log(`HeaderComp getVacancies() called`);
-    this.currentViewEmitter.emit('vacancies');
+    this.currentViewEmitter.emit('Vacancies');
   }
 
   login(): void {
     console.log(`HeaderComp login() called`);
-    this.currentViewEmitter.emit('login-form');
+    this.currentViewEmitter.emit('Login');
   }
 
   home(): void {
     console.log(`HeaderComp home() called`);
-    this.currentViewEmitter.emit('home');
+    this.currentViewEmitter.emit('Home');
   }
 }

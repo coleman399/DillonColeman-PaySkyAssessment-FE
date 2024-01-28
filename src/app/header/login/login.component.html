@@ -1,17 +1,14 @@
-<div
-  *ngIf="
-    internalView === 'login-form';
-    then loginForm;
-    else createNewAccountForm
-  "
-></div>
-
-<ng-template #loginForm>
+<div [ngSwitch]="internalView">
   <app-login-form
-    (loginFormEmitter)="updateLoginView($event)"
+    *ngSwitchCase="'login-form'"
+    (signInEmitter)="updateLoginView($event)"
+    (navigateToForgotPasswordFormEmitter)="updateLoginView($event)"
   ></app-login-form>
-</ng-template>
-<ng-template #createNewAccountForm>
   <app-create-new-account-form
+    *ngSwitchCase="'create-new-account-form'"
     (cancelCreatingNewAccountEmitter)="updateLoginView($event)"
   ></app-create-new-account-form>
+  <app-forgot-password-form
+    *ngSwitchCase="'forgot-password-form'"
+  ></app-forgot-password-form>
+</div>

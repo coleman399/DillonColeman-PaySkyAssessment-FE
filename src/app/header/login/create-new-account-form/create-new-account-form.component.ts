@@ -17,6 +17,6 @@ export class CreateNewAccountFormComponent {
 
   cancelCreatingNewAccount() {
     console.log('CreateNewAccountFormComp cancelCreatingNewAccount() called');
-    this.cancelCreatingNewAccountEmitter.emit('login');
+    this.cancelCreatingNewAccountEmitter.emit('login-form');
   }
 }
