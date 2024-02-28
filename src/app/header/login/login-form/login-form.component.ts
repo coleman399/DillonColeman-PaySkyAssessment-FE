@@ -1,4 +1,5 @@
 import { Component, EventEmitter, Output } from '@angular/core';
+import { NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-login-form',
@@ -9,10 +10,18 @@ export class LoginFormComponent {
   @Output() signInEmitter: EventEmitter<string> = new EventEmitter<string>();
   @Output() navigateToForgotPasswordFormEmitter: EventEmitter<string> =
     new EventEmitter<string>();
+  username: string | undefined = undefined;
+  password: string | undefined = undefined;
 
-  signIn() {
-    console.log('LoginFormComp signIn() called');
+  onSubmit(form: NgForm) {
+    console.log('Form submitted');
+    console.log('LoginFormComp onSubmit() called');
+    console.log(`Username: ${this.username}`);
+    console.log(`Password: ${this.password}`);
     this.signInEmitter.emit('sign-in');
+    this.username = undefined;
+    this.password = undefined;
+    form.resetForm();
   }
 
   navigateToForgotPasswordForm() {

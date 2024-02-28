@@ -3,7 +3,11 @@
     <div class="col-sm-2"></div>
     <div class="col-sm-8">
       <br />
-      <form #newVacancyForm="ngForm" (ngSubmit)="onSubmit(newVacancyForm)">
+      <form
+        #newVacancyForm="ngForm"
+        (ngSubmit)="onSubmit(newVacancyForm)"
+        ngNativeValidate
+      >
         <div class="form-group">
           <label for="Volume" class="form-label">Volume</label>
           <input
@@ -13,6 +17,7 @@
             id="Volume"
             placeholder="10"
             [(ngModel)]="volume"
+            required
           />
         </div>
         <div class="form-group">
@@ -21,11 +26,14 @@
           >
           <input
             class="form-control"
-            type="date"
+            type="text"
             name="Expiration Date"
             id="Expiration Date"
-            placeholder="12/25/2024"
+            [placeholder]="datePlaceholder"
             [(ngModel)]="expirationDate"
+            onfocus="(this.type='date')"
+            onblur="(this.type='text')"
+            required
           />
         </div>
         <br />

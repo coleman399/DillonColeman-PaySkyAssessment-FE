@@ -3,41 +3,58 @@
     <div class="col-2"></div>
     <div class="col-8">
       <br />
-      <form>
+      <form
+        #loginForm="ngForm"
+        (ngSubmit)="onSubmit(loginForm)"
+        ngNativeValidate
+      >
         <div class="form-group">
-          <label for="inputEmailOrUsername" class="form-label"
+          <label for="email-or-username" class="form-label"
             >Email or Username</label
           >
           <input
-            type="text"
             class="form-control"
-            id="inputEmailOrUsername"
+            type="email"
+            id="email-or-username"
+            name="email-or-username"
             placeholder="user@paysky.com"
+            autocomplete="username"
+            [(ngModel)]="username"
+            required
           />
         </div>
         <div class="form-group">
-          <label for="inputPassword" class="form-label">Password</label>
+          <label for="current-password" class="form-label">Password</label>
           <input
-            type="password"
             class="form-control"
-            id="inputPassword"
+            type="password"
+            id="current-password"
+            name="current-password"
             placeholder="Password"
+            autocomplete="current-password"
+            [(ngModel)]="password"
+            required
           />
         </div>
         <div class="form-group">
-          <label class="form-check-label" id="rememberMe"
-            ><input type="checkbox" id="rememberMe" /> Remember me</label
+          <label class="form-check-label" id="remember-me"
+            ><input type="checkbox" id="remember-me" /> Remember me</label
           >
         </div>
         <br />
         <div class="col text-center">
-          <button type="submit" class="btn btn-primary" (click)="signIn()">
+          <button
+            type="submit"
+            class="btn btn-primary"
+            aria-placeholder="Submit"
+          >
             Sign in
           </button>
           <button
             type="button"
             class="btn btn-primary"
             (click)="navigateToForgotPasswordForm()"
+            aria-placeholder="Forgot password"
           >
             Forgot password
           </button>
